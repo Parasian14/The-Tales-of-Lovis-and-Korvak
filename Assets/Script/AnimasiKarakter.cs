@@ -9,7 +9,6 @@ public class AnimasiKarakter : MonoBehaviour
     private float kecepatan = 5f;
     Transform t;
     [SerializeField]private PlayerMovement player;
-    [SerializeField]private PlayerInteraction playerIn;
 
     public bool diBawah;
     public Transform cekBawah;
@@ -40,7 +39,7 @@ public class AnimasiKarakter : MonoBehaviour
         if(player.diTanah || diBawah){
             anim.SetBool("Jump", false);
             anim.SetBool("Jatuh", false);
-        }else if(Input.GetKeyDown(KeyCode.Space) && diBawah && playerIn.pegang == false){
+        }else if(Input.GetKeyDown(KeyCode.Space) && diBawah){
             anim.SetTrigger("Takeoff");
         }else if(player.diTanah == false && Input.GetKeyDown(KeyCode.Space) == false){
             anim.SetBool("Jatuh", true);
@@ -48,12 +47,6 @@ public class AnimasiKarakter : MonoBehaviour
             anim.SetBool("Jump", true);
         }
         
-        
-        if(playerIn.pegang){
-            anim.SetBool("Dorong", true);
-        }else{
-            anim.SetBool("Dorong", false);
-        }
     }
     
 }
