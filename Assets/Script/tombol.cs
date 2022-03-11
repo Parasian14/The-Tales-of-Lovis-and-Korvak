@@ -5,27 +5,21 @@ public class tombol : MonoBehaviour
 {
     public Renderer r;
     public bool pressed = false;
+    private Animator anim;
 
     private void Awake()
     {
         r = GetComponent<Renderer>();
-        
+        anim = GetComponent<Animator>();
     }
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            //tombol menjadi transparan dan memberikan kesan seperti diinjak
-            GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
             pressed = true;
-                       
+            anim.SetTrigger("pencet"); 
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        //tombol muncul setelah tidak diinjak
-        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);     
     }
 
 }

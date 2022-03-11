@@ -23,8 +23,11 @@ public class pintu : MonoBehaviour
     private void Update()
     {
         //jika tombol diinjak, boolean preesed akan menjadi true dan method pintu dipanggil berkali-kali.
-        if (GameObject.Find("tombol").GetComponent<tombol>().pressed == true)
+        if (GameObject.Find("tombol").GetComponent<tombol>().pressed == true){
             BukaPintu();
+            gameObject.SetActive(false);
+        }
+            
     }
 
     private void OnDrawGizmos()
