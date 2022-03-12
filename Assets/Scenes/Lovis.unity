@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   darah: {fileID: 2094964415}
+  respawn: 0
 --- !u!1 &389734506
 GameObject:
   m_ObjectHideFlags: 0
@@ -28659,6 +28660,7 @@ MonoBehaviour:
   healthAwal: 3
   dead: 0
   penuh: 0
+  cp: {fileID: 329344648}
   durasi: 0
   banyakFlash: 0
 --- !u!114 &2094964416
