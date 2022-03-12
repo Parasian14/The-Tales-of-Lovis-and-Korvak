@@ -46,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
             badan.velocity = new Vector2(badan.velocity.x, tinggiLompat);
             lompat--;
         }
-        
-        
+ 
     }
 }
