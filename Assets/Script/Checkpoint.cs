@@ -6,7 +6,10 @@ public class Checkpoint : MonoBehaviour
 {
     public Health darah;
     private Vector3 lokasi;
+    private Vector3 lokasi2;
     public bool respawn;
+    public bool respawn2;
+    public bool dapat;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,9 @@ public class Checkpoint : MonoBehaviour
         
         if(collision.tag == "Checkpoint"){
             lokasi = transform.position;
+            dapat = true;
+        }else if(collision.tag == "CheckpointS"){
+            lokasi2 = transform.position;
         }
     }
 
@@ -24,8 +30,12 @@ public class Checkpoint : MonoBehaviour
         if(darah.dead){
             transform.position = lokasi;
             respawn = true;
+        }else if(darah.kenaDuri){
+            transform.position = lokasi2;
+            respawn2 = true;
         }else{
             respawn = false;
+            respawn2 = false;
         }
     }
 }

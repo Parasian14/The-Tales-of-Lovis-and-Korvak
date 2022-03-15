@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public bool dead;
     public bool penuh;
     public Checkpoint cp;
+    public bool kenaDuri;
 
     [Header("IFrames")]
     [SerializeField] private float durasi;
@@ -28,6 +29,10 @@ public class Health : MonoBehaviour
         //method untuk mengurangi darah player
         if(_damage > healthSaatIni){
             _damage = healthSaatIni;
+        }
+
+        if(_damage == 0.5f){
+            kenaDuri = true;
         }
 
         healthSaatIni = Mathf.Clamp(healthSaatIni - _damage, 0, healthAwal);
@@ -59,6 +64,10 @@ public class Health : MonoBehaviour
         //mengecek apakah sudah respawn atau belum.
         if(cp.respawn){
            dead = false;
+        }
+
+        if(cp.respawn2){
+            kenaDuri = false;
         }
 
         if(healthSaatIni == healthAwal){
