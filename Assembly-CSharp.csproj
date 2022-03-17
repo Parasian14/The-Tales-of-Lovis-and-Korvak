@@ -90,6 +90,11 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Script\pintu1.cs" />
+     <Compile Include="Assets\Script\ChangePlayer.cs" />
+     <Compile Include="Assets\Script\CameraFollow2.cs" />
+     <Compile Include="Assets\Script\KhususK\AnimasiK.cs" />
+     <Compile Include="Assets\Script\ScripPindah\LockTransform.cs" />
+     <Compile Include="Assets\Script\ScripPindah\LockTransform2.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
