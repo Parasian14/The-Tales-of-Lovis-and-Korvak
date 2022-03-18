@@ -31,8 +31,9 @@ public class Health : MonoBehaviour
             _damage = healthSaatIni;
         }
 
+        //bug
         if(_damage == 0.5f){
-            kenaDuri = true;
+           kenaDuri = true;
         }
 
         healthSaatIni = Mathf.Clamp(healthSaatIni - _damage, 0, healthAwal);
