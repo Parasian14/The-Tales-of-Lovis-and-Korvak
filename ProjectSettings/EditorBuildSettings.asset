@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Korvak.unity
     guid: 564bd1c87b5f8a3478313f100e4c4811
   - enabled: 1
+    path: Assets/Scenes/Bertemu.unity
+    guid: cb93161bc8220364da48815892bde1b7
+  - enabled: 1
     path: Assets/Scenes/Lovis.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Lovis & Korvak.unity
     guid: 317358c5acc3c3c488bb12cb2f63a278
+  - enabled: 1
+    path: Assets/Scenes/Akhir.unity
+    guid: 8f2a51a9d915d9f47a579bd9889bb656
   m_configObjects: {}

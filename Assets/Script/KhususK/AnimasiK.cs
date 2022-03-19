@@ -8,7 +8,7 @@ public class AnimasiK : MonoBehaviour
     private float jalan;
     private float kecepatan = 5f;
     Transform t;
-    [SerializeField]private PlayerMovement player;
+    [SerializeField]private PlayerMovementK player;
 
     public bool diBawah;
     public Transform cekBawah;

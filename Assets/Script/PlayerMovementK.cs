@@ -16,6 +16,8 @@ public class PlayerMovementK : MonoBehaviour
     public Transform cekTanah;
     public float cekKejauhan;
     public LayerMask tanahnya;
+    private Vector3 kunci;
+    [SerializeField]private PlayerInteraction playerIn;
 
     private float lompat = 1;
 
@@ -27,13 +29,17 @@ public class PlayerMovementK : MonoBehaviour
     private void Update(){    
         //berjalan
         jalan = Input.GetAxis("Horizontal");
-        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);   
+        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);  
 
         //balik badan
-        if(jalan > 0.01f){
+        if(playerIn.pegang){
+            transform.localScale = kunci;
+        }else if(jalan > 0.01f){
             transform.localScale = new Vector3(1, 1, 1);
+            kunci = transform.localScale;
         }else if(jalan < -0.01f){
             transform.localScale = new Vector3(-1, 1, 1);
+            kunci = transform.localScale;
         }  
         
         diTanah = Physics2D.OverlapCircle(cekTanah.position, cekKejauhan, tanahnya);

@@ -6,6 +6,7 @@ public class pintu1 : MonoBehaviour
     [SerializeField] private Transform pos1, pos2, posAwal;
     [SerializeField] private float kecepatanBuka;
     Vector3 nextPos;
+    public GameObject gb;
     
 
     private void Start()
@@ -23,7 +24,7 @@ public class pintu1 : MonoBehaviour
     private void Update()
     {
         //jika tombol diinjak, boolean preesed akan menjadi true dan method pintu dipanggil berkali-kali.
-        if (GameObject.Find("tombol1").GetComponent<tombol1>().pressed == true){
+        if (gb.GetComponent<tombol1>().pressed == true){
             BukaPintu();
             gameObject.SetActive(false);
         }
