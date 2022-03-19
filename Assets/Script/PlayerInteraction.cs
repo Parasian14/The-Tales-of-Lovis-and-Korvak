@@ -11,6 +11,7 @@ public class PlayerInteraction : MonoBehaviour
     private bool diTanah;
     public float cekKejauhan;
     public LayerMask tanahnya;
+    public Animator anim;
 
     private void Update()
     {
@@ -27,6 +28,8 @@ public class PlayerInteraction : MonoBehaviour
             kotak.GetComponent<TarikKotak>().ditarik = true;
             kotak.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             pegang = true;
+            anim.SetBool("TarikKotak", true);
+            
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
@@ -34,6 +37,7 @@ public class PlayerInteraction : MonoBehaviour
             kotak.GetComponent<FixedJoint2D>().enabled = false;
             kotak.GetComponent<TarikKotak>().ditarik = false;
             pegang = false;
+            anim.SetBool("TarikKotak", false);
         }
     }
 

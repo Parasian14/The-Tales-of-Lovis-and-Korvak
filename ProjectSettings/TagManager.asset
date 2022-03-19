@@ -9,6 +9,7 @@ TagManager:
   - Jatuh
   - Checkpoint
   - CheckpointS
+  - Selanjutnya
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Tanah
   - Kotaknya
   - Musuhterbang
-  - 
+  - Musuh
   - 
   - 
   - VIdeoEfek
