@@ -11,6 +11,6 @@ public class mainmenu : MonoBehaviour
     }
 
     public void Play(){
-        SceneManager.LoadScene("Lovis");
+        SceneManager.LoadScene(1);
     }
 }

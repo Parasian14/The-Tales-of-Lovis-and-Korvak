@@ -32,7 +32,7 @@ public class Health : MonoBehaviour
         }
 
         //bug
-        if(_damage == 0.5f){
+        if(_damage == 0.5f && healthSaatIni > 0.5f){
            kenaDuri = true;
         }
 

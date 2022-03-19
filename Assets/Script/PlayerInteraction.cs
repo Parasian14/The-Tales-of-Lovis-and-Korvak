@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private float jarak;
-    GameObject kotak;
+    public GameObject kotak;
     public LayerMask boxMask;
     public bool pegang;
     public Transform cekKaki;

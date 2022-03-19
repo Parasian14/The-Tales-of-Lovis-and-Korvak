@@ -13,6 +13,6 @@ public class Menghilang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Cursor.visible = false;
     }
 }
